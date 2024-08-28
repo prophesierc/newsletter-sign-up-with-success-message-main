@@ -1,3 +1,3 @@
-<template>
-    
-</template>
+<script>
+  console.log('test')
+</script>
