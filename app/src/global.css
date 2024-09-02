@@ -1,0 +1,49 @@
+:root{
+  /* Colors */
+
+    /* Primary */
+      --primary-clr-tomato: hsl(4, 100%, 67%);
+
+    /* Neutral */
+      --neutral-clr-Dark-Slate-Grey: hsl(234, 29%, 20%);
+      --neutral-clr-Charcoal-Grey: hsl(235, 18%, 26%);
+      --neutral-clr-Grey: hsl(231, 7%, 60%);
+      --neutral-clr-White: hsl(0, 0%, 100%);
+
+  /* Typography */
+
+    /* Body Copy */
+      --fs-paragraph: 16px;
+
+  /* Font */
+      --ff: "Roboto", sans-serif;
+      --fw-400: 400;
+      --fw-700: 700;
+}
+
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0;
+}
+
+main{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body{
+  background-color: var(--neutral-clr-White);
+}
+  
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
