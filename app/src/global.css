@@ -21,29 +21,49 @@
       --fw-700: 700;
 }
 
-* { 
-  box-sizing: border-box; 
-  margin: 0; 
+* {
+  box-sizing: border-box;
+  margin: 0;
   padding: 0;
 }
 
-main{
-  width: 100vw;
+body {
+  background-color: var(--neutral-clr-White);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-body{
-  background-color: var(--neutral-clr-White);
-}
-  
-.attribution { 
-  font-size: 11px; 
-  text-align: center; 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: var(--ff);
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
-.attribution a { 
-  color: hsl(228, 45%, 44%); 
+.main__title{
+  font-size: 34px;
+  text-align: left; 
+  width: 100%;
+  margin: .5em 0 1em 0;
+}
+
+.main__subtitle{
+  font-size: var(--fs-paragraph);
+  text-align: left; 
+  width: 100%;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  width: 100%;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }

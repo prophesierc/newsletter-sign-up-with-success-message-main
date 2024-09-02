@@ -1,6 +1,6 @@
 <template>
+  <ImageHandler />
   <main>
-    <ImageHandler />
     <h1 class="main__title">
       Stay updated!
     </h1>
