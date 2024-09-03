@@ -20,11 +20,13 @@ export default {
 
   .email__input{
     width: 100%;
-    height: 3em;
+    height: 3.2em;
     border: 1px solid var(--neutral-clr-Grey);
     color: var(--neutral-clr-Grey);
     border-radius: 8px;
     padding-left: 1.5em;
     font-size: 16px;  
+    font-family: inherit;
+    margin: 0 0 .5em 0;
   }
 </style>

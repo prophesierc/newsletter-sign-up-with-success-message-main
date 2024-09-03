@@ -24,7 +24,7 @@ export default {
     background: url('@/assets/images/icon-list.svg') no-repeat left top;
     line-height: 1.5em;
     padding-left: 2.6em;
-    margin-top: .5em;
+    margin-top: 1em;
     font-size: var(--fs-paragraph);
     font-weight: var(--fw-400);
     color: var(--neutral-clr-Dark-Slate-Grey);

@@ -9,6 +9,7 @@
     </h2>
     <ListItems />
     <EmailField />
+    <SubscribeButton />
   </main>
 </template>
 
@@ -16,6 +17,7 @@
 import ImageHandler from '@/components/ImageHandler.vue';
 import ListItems from '@/components/listItems.vue';
 import EmailField from '@/components/EmailField.vue';
+import SubscribeButton from '@/components/SubscribeButton.vue';
 
 export default 
 {
@@ -23,7 +25,8 @@ export default
   {
     ImageHandler,
     ListItems,
-    EmailField
+    EmailField,
+    SubscribeButton
   }
 }
 </script>
