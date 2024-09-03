@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header__container">
     <picture class="header__picture">
       <source media="(max-width: 699px)" srcset="@/assets/images/illustration-sign-up-mobile.svg">
       <source media="(min-width: 700px)" srcset="@/assets/images/illustration-sign-up-desktop.svg">
@@ -15,17 +15,17 @@ export default {
 </script>
 
 <style>
-.header {
-  width: 100%;
+.header__container {
+  width: 100vw;
   height: auto;
   overflow: hidden;
 }
 
 .header__picture img{
-  width: 100%;
+  width: 100vw;
   height: auto;
-  max-height: 30vh;
+  max-height: 32vh;
   object-fit: cover;
-  border-radius: 0 0 18px 18px;
+  border-radius: 0 0 14px 14px;
 }
 </style>

@@ -38,24 +38,26 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
   font-family: var(--ff);
   margin-left: 1rem;
   margin-right: 1rem;
 }
 
-.main__title{
-  font-size: 34px;
+.content__title{
+  font-size: 38px;
   text-align: left; 
   width: 100%;
-  margin: .5em 0 1em 0;
+  margin: .5em 0 .5em 0;
+  font-weight: var(--fw-700);
+  color: var(--neutral-clr-Dark-Slate-Grey);
 }
 
-.main__subtitle{
+.content__subtitle{
   font-size: var(--fs-paragraph);
   text-align: left; 
   width: 100%;
+  font-weight: var(--fw-400);
+  color: var(--neutral-clr-Dark-Slate-Grey);
 }
 
 .attribution {
