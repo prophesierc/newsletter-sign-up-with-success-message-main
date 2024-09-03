@@ -64,8 +64,11 @@ main {
   font-size: 11px;
   text-align: center;
   width: 100%;
+  color: var(--primary-clr-tomato);
+  margin-top: 1em;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+  text-decoration: none;
 }
