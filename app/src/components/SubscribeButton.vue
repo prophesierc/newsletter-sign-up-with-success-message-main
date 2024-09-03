@@ -3,9 +3,11 @@
 </template>
 
 <script>
-export default {
-  name: 'SubscribeButton'
-}
+  export default {
+    name: 'SubscribeButton'
+  }
+
+// needs logic to open modal on click event
 </script>
 
 <style>

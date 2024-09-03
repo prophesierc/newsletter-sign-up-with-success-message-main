@@ -22,6 +22,7 @@ import ImageHandler from '@/components/ImageHandler.vue';
 import ListItems from '@/components/listItems.vue';
 import EmailField from '@/components/EmailField.vue';
 import SubscribeButton from '@/components/SubscribeButton.vue';
+import SubscribeModal from '@/components/SubscribeModal.vue';
 
 export default 
 {
@@ -30,7 +31,8 @@ export default
     ImageHandler,
     ListItems,
     EmailField,
-    SubscribeButton
+    SubscribeButton,
+    SubscribeModal
   }
 }
 </script>
