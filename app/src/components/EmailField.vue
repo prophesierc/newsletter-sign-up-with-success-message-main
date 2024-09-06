@@ -34,7 +34,7 @@ export default
   .email__title {
     font-size: 12px;
     color: var(--neutral-clr-Charcoal-Grey);
-    margin: 3em 0 .5em 0;
+    margin: 2.5em 0 .5em 0;
   }
 
   .email__input :deep(.v-input__control) {
