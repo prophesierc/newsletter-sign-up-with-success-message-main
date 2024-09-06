@@ -1,12 +1,11 @@
 <template>
-  <button class="subscribe__button" type="submit">Subscribe to monthly newsletter</button> 
+  <button class="subscribe__button" type="submit">{{ buttonText }}</button> 
 </template>
 
 <script>
   export default {
-    name: 'SubscribeButton'
+    props: ['buttonText']
   }
-
 // needs logic to open modal on click event
 </script>
 

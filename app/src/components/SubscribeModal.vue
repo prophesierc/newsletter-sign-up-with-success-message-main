@@ -14,7 +14,7 @@
 export default {
 name: 'SubscribeModal'
 }
-import SubscribeButton from '@/components/SubscribeButton.vue';
+import SubscribeButton from '@/components/props/SubscribeButton.vue';
 
 </script>
   

@@ -9,7 +9,7 @@
     </h2>
     <ListItems />
     <EmailField />
-    <SubscribeButton />
+    <SubscribeButton :buttonText='buttonText' />
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="https://github.com/prophesierc">ProphesierC</a>.
@@ -21,8 +21,8 @@
 import ImageHandler from '@/components/ImageHandler.vue';
 import ListItems from '@/components/listItems.vue';
 import EmailField from '@/components/EmailField.vue';
-import SubscribeButton from '@/components/SubscribeButton.vue';
 import SubscribeModal from '@/components/SubscribeModal.vue';
+import SubscribeButton from '@/components/props/SubscribeButton.vue';
 
 export default 
 {
@@ -33,6 +33,12 @@ export default
     EmailField,
     SubscribeButton,
     SubscribeModal
+  },
+  data() 
+  {
+    return {
+      buttonText: 'Subscribe to monthly newsletter'
+    }
   }
 }
 </script>
