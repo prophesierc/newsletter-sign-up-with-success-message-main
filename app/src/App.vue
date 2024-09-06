@@ -7,7 +7,9 @@
     <h2 class="content__subtitle">
       Join 60,000+ product managers receiving monthly updates on:
     </h2>
-    <ListItems />
+    <ListItems :listedItems='listedItem1'/>
+    <ListItems :listedItems='listedItem2'/>
+    <ListItems :listedItems='listedItem3'/>
     <EmailField />
     <SubscribeButton :buttonText='buttonText' />
     <div class="attribution">
@@ -19,9 +21,9 @@
 
 <script>
 import ImageHandler from '@/components/ImageHandler.vue';
-import ListItems from '@/components/listItems.vue';
 import EmailField from '@/components/EmailField.vue';
 import SubscribeModal from '@/components/SubscribeModal.vue';
+import ListItems from '@/components/props/listItems.vue';
 import SubscribeButton from '@/components/props/SubscribeButton.vue';
 
 export default 
@@ -37,7 +39,10 @@ export default
   data() 
   {
     return {
-      buttonText: 'Subscribe to monthly newsletter'
+      buttonText: 'Subscribe to monthly newsletter',
+      listedItem1: 'Product discovery and building what matters',
+      listedItem2: 'Measuring to ensure updates are a success',
+      listedItem3: 'And much more!'
     }
   }
 }

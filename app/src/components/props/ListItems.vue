@@ -1,14 +1,13 @@
 <template>
   <ul class="list__container">
-    <li class="list__item">Product discovery and building what matters</li>
-    <li class="list__item">Measuring to ensure updates are a success</li>
-    <li class="list__item">And much more!</li>
+    <li class="list__item">{{ listedItems }}</li>
   </ul>
 </template>
 
 <script>
 export default {
-  name: 'ListItems'
+  name: 'ListItems',
+  props: ['listedItems']
 }
 </script>
 
