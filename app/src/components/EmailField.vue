@@ -1,7 +1,6 @@
 <template>
   <v-form ref="form">
     <h3 class="email__title">Email address</h3>
-
     <v-text-field
       v-model="email"
       :rules="[rules.required, rules.email]"
@@ -11,17 +10,19 @@
       clearable
       variant="outlined"
       @input="checkValidation"
+      @keydown.enter="handleEnter"
     ></v-text-field>
   </v-form>
 </template>
 
 <script>
-import { ref, watch } from 'vue';
+import { ref } from 'vue';
 
 export default {
   name: 'EmailField',
-  emits: ['update:isValid'],
-  setup(_, { emit }) {
+  emits: ['update:isValid', 'enter-pressed', 'clear'],
+  setup(_, { emit }) 
+  {
     const email = ref('');
     const form = ref(null);
 
@@ -33,34 +34,51 @@ export default {
 
     const checkValidation = () => 
     {
+      const formValid = form.value ? form.value.validate() 
+      : false;
       const emailValid = rules.email(email.value) === true;
-      emit('update:isValid', emailValid);
+      const isValid = formValid && emailValid;
+      emit('update:isValid', isValid);
     };
 
-    watch(email, checkValidation, 
-    { immediate: true });
+    const handleEnter = (event) => 
+    {
+      event.preventDefault(); 
+      if (rules.email(email.value) === true) 
+      {
+        emit('enter-pressed');
+      }
+    };
+
+    const clearEmail = () => 
+    {
+      email.value = '';
+      checkValidation();
+    };
 
     return {
       email,
       form,
       rules,
-      checkValidation
+      checkValidation,
+      handleEnter,
+      clearEmail
     };
   }
 };
 </script>
 
 <style scoped>
-.email__title {
-  font-size: 12px;
-  color: var(--neutral-clr-Charcoal-Grey);
-  margin: 2.5em 0 .5em 0;
-}
-.email__input :deep(.v-input__control) {
-  width: 100%;
-  background-color: var(--neutral-clr-White);
-}
-.email__input :deep(.v-field__input) {
-  color: var(--neutral-clr-Grey);
-}
+  .email__title {
+    font-size: 12px;
+    color: var(--neutral-clr-Charcoal-Grey);
+    margin: 2.5em 0 .5em 0;
+  }
+  .email__input :deep(.v-input__control) {
+    width: 100%;
+    background-color: var(--neutral-clr-White);
+  }
+  .email__input :deep(.v-field__input) {
+    color: var(--neutral-clr-Grey);
+  }
 </style>

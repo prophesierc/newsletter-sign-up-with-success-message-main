@@ -1,7 +1,6 @@
 <template>
   <v-btn 
     class="subscribe__button" 
-    type="submit"
     density="default"
     size="large"
     @click="open"

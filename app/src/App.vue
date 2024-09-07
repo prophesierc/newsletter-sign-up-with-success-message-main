@@ -8,13 +8,18 @@
     <ListItems :listedItems="listedItem1" />
     <ListItems :listedItems="listedItem2" />
     <ListItems :listedItems="listedItem3" />
-    <EmailField @update:isValid="isEmailValid = $event" />
+    <EmailField 
+      ref="emailField"
+      @update:isValid="handleEmailValidation" 
+      @enter-pressed="handleEnterPressed"
+    />
     <SubscribeButton 
+      ref="subscribeButton"
       :buttonText="buttonText" 
       :disabled="!isEmailValid"
-      @open-subscribe-modal="showModal = true" 
+      @open-subscribe-modal="openModal" 
     />
-    <SubscribeModal :show="showModal" @close-subscribe-modal="showModal = false" />
+    <SubscribeModal :show="showModal" @close-subscribe-modal="handleModalClose" />
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="https://github.com/prophesierc">ProphesierC</a>.
@@ -48,6 +53,29 @@ export default
       listedItem3: 'And much more!',
       showModal: false,
       isEmailValid: false
+    }
+  },
+  methods: 
+  {
+    handleEmailValidation(isValid) 
+    {
+      this.isEmailValid = isValid;
+    },
+    handleEnterPressed() 
+    {
+      if (this.isEmailValid) 
+      {
+        this.$refs.subscribeButton.$el.click();
+      }
+    },
+    openModal() 
+    {
+      this.showModal = true;
+      this.$refs.emailField.clearEmail();
+    },
+    handleModalClose() 
+    {
+      this.showModal = false;
     }
   }
 }
