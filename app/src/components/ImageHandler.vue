@@ -41,16 +41,14 @@ export default {
   }
 
   .header__container {
-    width: 50%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end; /* Align the image to the right */
   }
 
   .header__picture img {
-    width: auto;
-    max-width: 100%;
+    max-width: 100%; /* Prevent the image from exceeding the container */
     height: auto;
-    object-fit: contain;
+    object-fit: contain; /* Maintain aspect ratio */
   }
 }
 </style>

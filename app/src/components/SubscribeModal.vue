@@ -102,3 +102,5 @@ export default
         font-size: var(--fs-paragraph);
     }
 </style>  
+
+<!-- need to adjust to 500px width -->

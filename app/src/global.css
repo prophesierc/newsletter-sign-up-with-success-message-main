@@ -33,7 +33,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: var(--ff);
-  width: 100vw;
+  max-height: 100vh;
 }
 
 main {
@@ -41,7 +41,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start; 
-  max-width: 800px;
   margin: 0 1em; 
 }
 
