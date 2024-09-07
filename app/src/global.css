@@ -33,18 +33,20 @@ body {
   justify-content: center;
   align-items: center;
   font-family: var(--ff);
+  width: 100vw;
 }
 
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  align-items: flex-start; 
+  max-width: 800px;
+  margin: 0 1em; 
 }
 
 .content__title{
-  font-size: 38px;
+  font-size: calc(32px + 2vw);
   text-align: left; 
   width: 100%;
   margin: .7em 0 .7em 0;
