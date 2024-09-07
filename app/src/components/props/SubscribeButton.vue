@@ -1,10 +1,10 @@
 <template>
   <v-btn 
-  class="subscribe__button" 
-  type="submit"
-  density="default"
-  size="large"
-  @click="modalHandler"
+    class="subscribe__button" 
+    type="submit"
+    density="default"
+    size="large"
+    @click="open"
   >
   {{ buttonText }}</v-btn> 
 </template>
@@ -15,9 +15,9 @@ export default
   props: ['buttonText'],
   methods: 
   {
-    handleClick() 
+    open() 
     {
-      this.$emit('open-modal');
+        this.$emit('open-subscribe-modal');
     }
   }
 }

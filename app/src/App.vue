@@ -11,7 +11,9 @@
     <ListItems :listedItems='listedItem2'/>
     <ListItems :listedItems='listedItem3'/>
     <EmailField />
-    <SubscribeButton :buttonText='buttonText' />
+    <SubscribeButton :buttonText='buttonText' @open-subscribe-modal="showModal = true" />
+    <SubscribeModal :show="showModal" @close-subscribe-modal="showModal = false" />
+
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="https://github.com/prophesierc">ProphesierC</a>.
@@ -22,9 +24,9 @@
 <script>
 import ImageHandler from '@/components/ImageHandler.vue';
 import EmailField from '@/components/EmailField.vue';
-import SubscribeModal from '@/components/SubscribeModal.vue';
-import ListItems from '@/components/props/listItems.vue';
+import ListItems from '@/components/props/ListItems.vue';
 import SubscribeButton from '@/components/props/SubscribeButton.vue';
+import SubscribeModal from '@/components/SubscribeModal.vue';
 
 export default 
 {
@@ -42,9 +44,9 @@ export default
       buttonText: 'Subscribe to monthly newsletter',
       listedItem1: 'Product discovery and building what matters',
       listedItem2: 'Measuring to ensure updates are a success',
-      listedItem3: 'And much more!'
+      listedItem3: 'And much more!',
+      showModal: false
     }
   }
 }
 </script>
-
