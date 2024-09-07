@@ -1,19 +1,20 @@
 <template>
   <ImageHandler />
   <main>
-    <h1 class="content__title">
-      Stay updated!
-    </h1>
+    <h1 class="content__title">Stay updated!</h1>
     <h2 class="content__subtitle">
       Join 60,000+ product managers receiving monthly updates on:
     </h2>
-    <ListItems :listedItems='listedItem1'/>
-    <ListItems :listedItems='listedItem2'/>
-    <ListItems :listedItems='listedItem3'/>
-    <EmailField />
-    <SubscribeButton :buttonText='buttonText' @open-subscribe-modal="showModal = true" />
+    <ListItems :listedItems="listedItem1" />
+    <ListItems :listedItems="listedItem2" />
+    <ListItems :listedItems="listedItem3" />
+    <EmailField @update:isValid="isEmailValid = $event" />
+    <SubscribeButton 
+      :buttonText="buttonText" 
+      :disabled="!isEmailValid"
+      @open-subscribe-modal="showModal = true" 
+    />
     <SubscribeModal :show="showModal" @close-subscribe-modal="showModal = false" />
-
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="https://github.com/prophesierc">ProphesierC</a>.
@@ -45,7 +46,8 @@ export default
       listedItem1: 'Product discovery and building what matters',
       listedItem2: 'Measuring to ensure updates are a success',
       listedItem3: 'And much more!',
-      showModal: false
+      showModal: false,
+      isEmailValid: false
     }
   }
 }

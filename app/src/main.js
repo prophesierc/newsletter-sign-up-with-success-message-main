@@ -3,7 +3,7 @@ import { createApp } from 'vue';
 // Vuetify
 import 'vuetify/styles';
 import { createVuetify } from 'vuetify';
-import { VBtn, VTextField } from 'vuetify/components';
+import { VBtn, VTextField, VForm } from 'vuetify/components';
 import '@mdi/font/css/materialdesignicons.css';
 
 import App from '@/App.vue';
@@ -14,6 +14,7 @@ const vuetify = createVuetify(
     {
       VBtn,
       VTextField,
+      VForm
     },
     icons: 
     {
