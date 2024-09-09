@@ -34,6 +34,7 @@ body {
   align-items: center;
   font-family: var(--ff);
   max-height: 100vh;
+  margin: 0;
 }
 
 main {
@@ -41,7 +42,11 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start; 
-  margin: 0 1em; 
+  width: 100%;
+}
+
+.content{
+  margin: 0 1em 0 1em;
 }
 
 .content__title{
@@ -72,4 +77,25 @@ main {
 .attribution a {
   color: hsl(228, 45%, 44%);
   text-decoration: none;
+}
+
+@media (min-width: 450px) {
+  /* this is the max width of image, so need to add background  */
+}
+
+@media (min-width: 800px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 2em; 
+    width: 100%; 
+  }
+
+  .content {
+    grid-column: 1; 
+  }
+
+  .header__container {
+    grid-column: 2; 
+  }
 }

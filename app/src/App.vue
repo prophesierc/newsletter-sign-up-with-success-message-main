@@ -1,28 +1,30 @@
 <template>
-  <ImageHandler />
   <main>
-    <h1 class="content__title">Stay updated!</h1>
-    <h2 class="content__subtitle">
-      Join 60,000+ product managers receiving monthly updates on:
-    </h2>
-    <ListItems :listedItems="listedItem1" />
-    <ListItems :listedItems="listedItem2" />
-    <ListItems :listedItems="listedItem3" />
-    <EmailField 
-      ref="emailField"
-      @update:isValid="handleEmailValidation" 
-      @enter-pressed="handleEnterPressed"
-    />
-    <SubscribeButton 
-      ref="subscribeButton"
-      :buttonText="buttonText" 
-      :disabled="!isEmailValid"
-      @open-subscribe-modal="openModal" 
-    />
-    <SubscribeModal :show="showModal" @close-subscribe-modal="handleModalClose" />
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://github.com/prophesierc">ProphesierC</a>.
+    <ImageHandler />
+    <div class="content">
+      <h1 class="content__title">Stay updated!</h1>
+      <h2 class="content__subtitle">
+        Join 60,000+ product managers receiving monthly updates on:
+      </h2>
+      <ListItems :listedItems="listedItem1" />
+      <ListItems :listedItems="listedItem2" />
+      <ListItems :listedItems="listedItem3" />
+      <EmailField 
+        ref="emailField"
+        @update:isValid="handleEmailValidation" 
+        @enter-pressed="handleEnterPressed"
+      />
+      <SubscribeButton 
+        ref="subscribeButton"
+        :buttonText="buttonText" 
+        :disabled="!isEmailValid"
+        @open-subscribe-modal="openModal" 
+      />
+      <SubscribeModal :show="showModal" @close-subscribe-modal="handleModalClose" />
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/prophesierc">ProphesierC</a>.
+      </div>
     </div>
   </main>
 </template>
