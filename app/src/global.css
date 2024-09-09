@@ -45,6 +45,12 @@ main {
   width: 100%;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .content{
   margin: 0 1em 0 1em;
 }
@@ -80,22 +86,41 @@ main {
 }
 
 @media (min-width: 450px) {
-  /* this is the max width of image, so need to add background  */
+  /* this is the max width of image, so need to add background for max-width*/
 }
 
 @media (min-width: 800px) {
   main {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 2em; 
-    width: 100%; 
+    flex-direction: row; /* Change direction to row for larger screens */
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row; /* Ensure container is in a row layout */
+    width: 100%;
+    height: 100%;
   }
 
   .content {
-    grid-column: 1; 
+    flex: 1; /* Take up half of the container width */
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .header__container {
-    grid-column: 2; 
+    flex: 1; /* Take up half of the container width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Ensure image is on the right */
+    order: 2;
+  }
+
+  .header__picture img {
+    width: 100%; /* Ensure image fits container width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
   }
 }

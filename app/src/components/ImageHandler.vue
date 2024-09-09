@@ -16,9 +16,7 @@ export default {
 
 <style scoped>
 .header__container {
-  width: 100%; 
-  display: flex;
-  justify-content: flex-end; 
+  width: 100%;
 }
 
 .header__picture {
