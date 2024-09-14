@@ -10,6 +10,7 @@ export default defineConfig(
     alias: 
     {
       '@': path.resolve(__dirname, './src')
-    }
+    },
+    base: '/newsletter-sign-up-with-success-message-main/'
   }
 })
