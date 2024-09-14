@@ -74,11 +74,23 @@ export default {
     color: var(--neutral-clr-Charcoal-Grey);
     margin: 2.5em 0 .5em 0;
   }
+
+  .email__input {
+    width: 100%;
+  }
+
   .email__input :deep(.v-input__control) {
     width: 100%;
-    background-color: var(--neutral-clr-White);
+    background-color: var(--neutral-clr-White);    
   }
+
   .email__input :deep(.v-field__input) {
     color: var(--neutral-clr-Grey);
+    background-color: hsl(5, 100%, 95%);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-right: -.8em;
   }
 </style>

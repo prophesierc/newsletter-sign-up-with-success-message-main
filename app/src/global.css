@@ -48,7 +48,7 @@ main {
 .container {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 100vw;
 }
 
 .content{
@@ -86,7 +86,11 @@ main {
 }
 
 @media (min-width: 450px) {
-  /* this is the max width of image, so need to add background for max-width*/
+  .header__picture img {
+    width: 100vw;
+    height: auto;
+    object-fit: contain;
+  }
 }
 
 @media (min-width: 800px) {
