@@ -17,6 +17,7 @@ export default
     open() 
     {
         this.$emit('open-subscribe-modal');
+        document.body.classList.toggle('no-scroll');
     }
   }
 }
@@ -34,6 +35,12 @@ export default
     font-family: inherit;
     margin: .5em 0 0 0;
   }
+
+  .subscribe__button:hover, .subscribe__button:active{
+    background: rgb(255,105,60);
+    background: linear-gradient(306deg, rgba(255,105,60,1) 0%, rgba(255,83,121,1) 100%);
+  }
+
   .subscribe__button :deep(.v-btn__content) {
     color: var(--neutral-clr-White) !important;
     text-transform: none !important;

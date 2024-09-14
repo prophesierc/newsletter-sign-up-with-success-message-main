@@ -92,5 +92,6 @@ export default {
     justify-content: center;
     align-items: center;
     margin-right: -.8em;
+    cursor: pointer;
   }
 </style>

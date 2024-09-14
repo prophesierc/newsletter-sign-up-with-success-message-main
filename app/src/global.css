@@ -72,6 +72,10 @@ main {
   color: var(--neutral-clr-Dark-Slate-Grey);
 }
 
+.no-scroll{
+  overflow: hidden;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;

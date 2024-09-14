@@ -1,17 +1,17 @@
 <template>
     <transition name="slide-from-top">
         <div v-if="show" class="subscribe__modal">
-          <div class="modal__content">
-            <img class="modal__image" src="@/assets/images/icon-success.svg">
-            <h4 class="modal__title">Thanks for subscribing!</h4>
-            <p class="modal__text">
-              A confirmation email has been sent to <b>ash@loremcompany.com</b>. 
-              Please open it and click the button inside to confirm your subscription.
-            </p>
-            <SubscribeButton :buttonText="buttonText" @click="close" />
-          </div>
+            <div class="modal__content">
+                <img class="modal__image" src="@/assets/images/icon-success.svg">
+                <h4 class="modal__title">Thanks for subscribing!</h4>
+                <p class="modal__text">
+                    A confirmation email has been sent to <b>ash@loremcompany.com</b>. 
+                    Please open it and click the button inside to confirm your subscription.
+                </p>
+                <SubscribeButton class="modal__button__close" :buttonText="buttonText" @click="close" />
+            </div>
         </div>
-      </transition>
+    </transition>
 </template>
   
 <script>
@@ -70,37 +70,85 @@ export default
         top: 0;
         left: 0;
         right: 0;
+        bottom: 0;
         background-color: var(--neutral-clr-White);
-        width: 100%;
-        height: 100%;
+        display: flex;
+        justify-content: center;
+        z-index: 9999;
     }
-
-    .modal__content{
+      
+    .modal__content {
         display: flex;
         flex-direction: column;
-        justify-content: left;
         text-align: left;
         font-family: var(--ff);
-        margin: 0 1em 0 1em;
+        background-color: var(--neutral-clr-White);
+        padding: 1em;
+        max-width: 500px;
+        width: 100%; 
+        max-height: 100%; 
+        overflow: hidden; 
     }
-
-    .modal__image{
+      
+    .modal__image {
         height: 50px;
         width: 50px;
-        margin: 40% 0 3em 0;
+        margin: 40% auto 3em 0;
     }
-
-    .modal__title{
+      
+    .modal__title {
         font-size: 34px;
         line-height: 1em;
         font-weight: var(--fw-700);
         margin: 0 0 1em 0;
     }
-
-    .modal__text{
-        margin-bottom: 96%;
+      
+    .modal__text {
+        margin-right: -2.2em;
         font-size: var(--fs-paragraph);
     }
-</style>  
 
-<!-- need to adjust to 500px width -->
+    .modal__button__close{
+        margin-top: auto;       
+        margin-bottom: 1.5em; 
+    }
+
+    @media (min-width: 375px) {
+        .subscribe__modal{
+            max-width: 100vw;
+            max-height: 100vh; 
+            align-items: center;
+            background-color: var(--neutral-clr-Charcoal-Grey);
+        }
+
+        .modal__content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 425px;
+            max-height: 400px; 
+            background-color: var(--neutral-clr-White);
+            padding: 0 2em 6em 2em;
+            border-radius: 12px;
+        }
+
+        .modal__image {
+            margin: 20% auto 2em 0;
+        }
+          
+        .modal__title {
+            font-size: 44px;
+            margin: 0 0 .5em 0;
+        }
+          
+        .modal__text {
+            margin-right: -1em;
+        }
+    
+        .modal__button__close{
+            margin-bottom: -1em;
+            margin-top: 2em; 
+        }
+    }
+
+</style>  
